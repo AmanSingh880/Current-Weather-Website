@@ -1,6 +1,6 @@
 function run(){
     let a=document.getElementById("cityname").value;
-    let apkey="d010097515bdb765a6f6ef5949a3b83b"
+    let apkey="api_key"
     fetch("https://api.openweathermap.org/data/2.5/weather?q="+a+"&appid="+apkey)
     .then(res=>res.json())
     .then(data=>{
@@ -17,4 +17,5 @@ function run(){
         document.getElementById("namew").innerHTML=`Wind Speed = ${wind}`;
     })
     .catch(err=> alert("Invalid city name"));
+
 }
